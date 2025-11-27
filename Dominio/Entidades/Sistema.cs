@@ -530,7 +530,7 @@ namespace Dominio.Entidades
             // 4. PRECARGAR PAGOS ÚNICOS (17 pagos)
             // ============================================
             AgregarPago(new PagoUnico(MetodoPago.CREDITO, tiposGasto[2], usuarios[5], "Pago de sueldos de abril", 45000, new DateTime(2024, 4, 10), "REC-10234"));
-            AgregarPago(new PagoUnico(MetodoPago.DEBITO, tiposGasto[0], usuarios[12], "Renovación de servidores", 32000, new DateTime(2024, 3, 22), "REC-10456"));
+            AgregarPago(new PagoUnico(MetodoPago.DEBITO, tiposGasto[0], usuarios[12], "Renovación de servidores", 32000, new DateTime(2025, 3, 22), "REC-10456"));
             AgregarPago(new PagoUnico(MetodoPago.EFECTIVO, tiposGasto[9], usuarios[3], "Viáticos para reunión de equipo", 1800, new DateTime(2024, 5, 3), "REC-10678"));
             AgregarPago(new PagoUnico(MetodoPago.CREDITO, tiposGasto[4], usuarios[20], "Compra de nuevas laptops", 48500, new DateTime(2024, 7, 18), "REC-10701"));
             AgregarPago(new PagoUnico(MetodoPago.DEBITO, tiposGasto[6], usuarios[0], "Pago de alquiler de oficina", 25000, new DateTime(2024, 1, 29), "REC-10845"));
