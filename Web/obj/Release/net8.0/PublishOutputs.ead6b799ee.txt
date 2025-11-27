@@ -1,0 +1,9 @@
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Web.exe
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Web.dll
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Web.deps.json
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Web.runtimeconfig.json
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Web.pdb
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Dominio.dll
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Web\obj\Release\net8.0\PubTmp\Out\Dominio.pdb

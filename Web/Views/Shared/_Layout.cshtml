@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sistema de Gestión de Gastos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-wallet2"></i> Sistema de Gastos
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        @{
+                            var rolUsuario = Context.Session.GetString("UsuarioRol");
+                            var nombreUsuario = Context.Session.GetString("UsuarioNombre");
+                        }
+
+                        @if (rolUsuario == "EMPLEADO")
+                        {
+                            <!-- Menú para EMPLEADO -->
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Empleado" asp-action="MisPagos">
+                                    <i class="bi bi-credit-card"></i> Mis Pagos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Empleado" asp-action="CargarPago">
+                                    <i class="bi bi-plus-circle"></i> Cargar Pago
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Empleado" asp-action="Perfil">
+                                    <i class="bi bi-person"></i> Mi Perfil
+                                </a>
+                            </li>
+                        }
+                        else if (rolUsuario == "GERENTE")
+                        {
+                            <!-- Menú para GERENTE -->
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Gerente" asp-action="PagosEquipo">
+                                    <i class="bi bi-bar-chart"></i> Pagos del Equipo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Gerente" asp-action="MisPagos">
+                                    <i class="bi bi-credit-card"></i> Mis Pagos
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-folder"></i> Tipos de Gasto
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Gerente" asp-action="CargarTipoGasto">
+                                            <i class="bi bi-plus-circle"></i> Cargar Tipo de Gasto
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Gerente" asp-action="EliminarTipoGasto">
+                                            <i class="bi bi-trash"></i> Eliminar Tipo de Gasto
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Gerente" asp-action="CargarPago">
+                                    <i class="bi bi-plus-circle"></i> Cargar Pago
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Gerente" asp-action="Perfil">
+                                    <i class="bi bi-person"></i> Mi Perfil
+                                </a>
+                            </li>
+                        }
+                    </ul>
+
+                    @if (!string.IsNullOrEmpty(nombreUsuario))
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person-circle"></i> @nombreUsuario
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <span class="dropdown-item-text">
+                                            <strong>Rol:</strong>
+                                            @if (rolUsuario == "GERENTE")
+                                            {
+                                                <span class="badge bg-danger">GERENTE</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-info">EMPLEADO</span>
+                                            }
+                                        </span>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" asp-controller="Login" asp-action="Logout">
+                                            <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top text-muted">
+        <div class="container text-center">
+            &copy; 2024 - Sistema de Gestión de Gastos -
+            <a asp-controller="Login" asp-action="Index">Inicio</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

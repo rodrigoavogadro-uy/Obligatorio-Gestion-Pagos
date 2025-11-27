@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Título";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="mb-4">➕ Cargar Nuevo Pago</h2>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <strong>Error:</strong> @ViewBag.Error
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            @if (ViewBag.Exito != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show">
+                    <strong>Éxito:</strong> @ViewBag.Exito
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <form method="post" asp-action="CargarPago">
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Pago</label>
+                    <select class="form-select" name="tipoPago" id="tipoPago" required onchange="toggleCampos()">
+                        <option value="">Seleccione...</option>
+                        <option value="Unico">Pago Único</option>
+                        <option value="Recurrente">Pago Recurrente</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Gasto</label>
+                    <select class="form-select" name="idTipoGasto" required>
+                        <option value="0">Seleccione...</option>
+                        @{
+                            var tiposGasto = ViewBag.TiposGasto as List<Dominio.Entidades.TipoGasto>;
+                            for (int i = 0; i < tiposGasto.Count; i++)
+                            {
+                                <option value="@i">@tiposGasto[i].Nombre</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Método de Pago</label>
+                    <select class="form-select" name="metodoPago" required>
+                        <option value="">Seleccione...</option>
+                        <option value="CREDITO">Crédito</option>
+                        <option value="DEBITO">Débito</option>
+                        <option value="EFECTIVO">Efectivo</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <input type="text" class="form-control" name="descripcion" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Monto</label>
+                    <input type="number" step="0.01" class="form-control" name="monto" required />
+                </div>
+
+                <!-- Campos para Pago Único -->
+                <div id="camposUnico" style="display:none;">
+                    <div class="mb-3">
+                        <label class="form-label">Fecha de Pago</label>
+                        <input type="date" class="form-control" name="fechaPago" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Número de Recibo</label>
+                        <input type="text" class="form-control" name="numeroRecibo" />
+                    </div>
+                </div>
+
+                <!-- Campos para Pago Recurrente -->
+                <div id="camposRecurrente" style="display:none;">
+                    <div class="mb-3">
+                        <label class="form-label">Fecha Desde</label>
+                        <input type="date" class="form-control" name="fechaDesde" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Fecha Hasta (opcional)</label>
+                        <input type="date" class="form-control" name="fechaHasta" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cuotas Pagadas</label>
+                        <input type="number" class="form-control" name="cuotasPagadas" value="0" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar Pago</button>
+                <a asp-action="PagosEquipo" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleCampos() {
+        var tipo = document.getElementById('tipoPago').value;
+        var camposUnico = document.getElementById('camposUnico');
+        var camposRecurrente = document.getElementById('camposRecurrente');
+
+        if (tipo === 'Unico') {
+            camposUnico.style.display = 'block';
+            camposRecurrente.style.display = 'none';
+        } else if (tipo === 'Recurrente') {
+            camposUnico.style.display = 'none';
+            camposRecurrente.style.display = 'block';
+        } else {
+            camposUnico.style.display = 'none';
+            camposRecurrente.style.display = 'none';
+        }
+    }
+</script>

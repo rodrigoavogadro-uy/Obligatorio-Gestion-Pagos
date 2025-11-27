@@ -1,0 +1,70 @@
+﻿@model List<Dominio.Entidades.Pago>
+
+@{
+    ViewData["Title"] = "Título de la página";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR ESTA LÍNEA
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4">💳 Mis Pagos del Mes</h2>
+
+            @if (Model.Count == 0)
+            {
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i> No tienes pagos registrados este mes.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                                <th>Tipo de Gasto</th>
+                                <th>Método</th>
+                                <th>Monto Base</th>
+                                <th>Monto Total</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var pago in Model)
+                            {
+                                <tr>
+                                    <td>@pago.Id</td>
+                                    <td>
+                                        @if (pago is Dominio.Entidades.PagoUnico)
+                                        {
+                                            <span class="badge bg-success">Único</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-primary">Recurrente</span>
+                                        }
+                                    </td>
+                                    <td>@pago.Descripcion</td>
+                                    <td>@pago.TipoGasto.Nombre</td>
+                                    <td>
+                                        <span class="badge bg-secondary">@pago.MetodoPago</span>
+                                    </td>
+                                    <td>$@pago.Monto.ToString("N2")</td>
+                                    <td><strong>$@pago.CalcularTotal().ToString("N2")</strong></td>
+                                    <td>@pago.ObtenerEstado()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-light mt-3">
+                    <strong>Total de pagos este mes:</strong> @Model.Count
+                </div>
+            }
+        </div>
+    </div>
+</div>

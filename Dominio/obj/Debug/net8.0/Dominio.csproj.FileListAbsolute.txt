@@ -9,3 +9,4 @@ C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación
 C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Dominio\obj\Debug\net8.0\refint\Dominio.dll
 C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Dominio\obj\Debug\net8.0\Dominio.pdb
 C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Dominio\obj\Debug\net8.0\ref\Dominio.dll
+C:\Users\rodri\Desktop\Analista en Tecnologías de la Información\Programación 2\PROGRAMACION 2 - INTENTO 2\Obligatorio\GestionGastos\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json

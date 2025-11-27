@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Título";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="mb-4">🗑️ Eliminar Tipo de Gasto</h2>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <strong>Error:</strong> @ViewBag.Error
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            @if (ViewBag.Exito != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show">
+                    <strong>Éxito:</strong> @ViewBag.Exito
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <div class="alert alert-warning">
+                <strong>⚠️ Advertencia:</strong> Solo se pueden eliminar tipos de gasto que no estén siendo utilizados por ningún pago.
+            </div>
+
+            <form method="post" asp-action="EliminarTipoGasto">
+                <div class="mb-3">
+                    <label class="form-label">Seleccione el tipo de gasto a eliminar</label>
+                    <select class="form-select" name="idTipoGasto" required>
+                        <option value="-1">Seleccione...</option>
+                        @{
+                            var tiposGasto = ViewBag.TiposGasto as List<Dominio.Entidades.TipoGasto>;
+                            for (int i = 0; i < tiposGasto.Count; i++)
+                            {
+                                <option value="@i">@tiposGasto[i].Nombre - @tiposGasto[i].Descripcion</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-danger"
+                        onclick="return confirm('¿Está seguro que desea eliminar este tipo de gasto?')">
+                    Eliminar
+                </button>
+                <a asp-action="PagosEquipo" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

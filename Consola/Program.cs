@@ -1,6 +1,5 @@
 ﻿using Dominio.Entidades;
 using Dominio.Enumeraciones;
-
 namespace Consola
 {
     internal class Program
@@ -100,7 +99,6 @@ namespace Consola
             Console.Write("Ingrese el email del usuario: ");
             string email = Console.ReadLine();
 
-            // VALIDACIONES EN PROGRAM (NO EN SISTEMA)
             if (string.IsNullOrEmpty(email))
             {
                 Console.WriteLine("\nError: El email no puede estar vacío.");
@@ -114,7 +112,7 @@ namespace Consola
                 return;
             }
 
-            // AHORA SÍ llamar a Sistema
+            //llamar a Sistema
             List<Pago> pagos = Sistema.Instancia.ObtenerPagosPorEmail(email);
 
             if (pagos.Count == 0)
@@ -138,7 +136,6 @@ namespace Consola
                 // POLIMORFISMO: CalcularTotal() se comporta diferente según el tipo
                 Console.WriteLine($"Monto total: ${pago.CalcularTotal()}");
 
-                // POLIMORFISMO: ObtenerEstado() se comporta diferente según el tipo
                 Console.WriteLine($"Estado: {pago.ObtenerEstado()}");
 
                 Console.WriteLine("----------------------------------------");
@@ -165,6 +162,9 @@ namespace Consola
 
             Console.Write("Fecha de incorporación (formato: dd/MM/yyyy): ");
             string fechaStr = Console.ReadLine();
+
+            Console.Write("Rol (1: EMPLEADO, 2: GERENTE): ");
+            string rolStr = Console.ReadLine();
 
             // VALIDACIONES EN PROGRAM ANTES DE LLAMAR A SISTEMA
             if (string.IsNullOrEmpty(nombre))
@@ -197,22 +197,46 @@ namespace Consola
                 return;
             }
 
+            if (string.IsNullOrEmpty(rolStr))
+            {
+                Console.WriteLine("\nError: Debe seleccionar un rol.");
+                return;
+            }
+
             // AHORA SÍ intentar crear el usuario (validaciones de negocio en Usuario)
             try
             {
                 DateTime fechaIncorporacion = DateTime.Parse(fechaStr);
+
+                // Determinar el rol
+                Rol rol;
+                if (rolStr == "1")
+                {
+                    rol = Rol.EMPLEADO;
+                }
+                else if (rolStr == "2")
+                {
+                    rol = Rol.GERENTE;
+                }
+                else
+                {
+                    Console.WriteLine("\nError: Opción de rol inválida. Use 1 o 2.");
+                    return;
+                }
 
                 Usuario nuevoUsuario = Sistema.Instancia.CrearUsuario(
                     nombre,
                     apellido,
                     contraseña,
                     nombreEquipo,
-                    fechaIncorporacion);
+                    fechaIncorporacion,
+                    rol); // ← NUEVO PARÁMETRO
 
                 Console.WriteLine("\n✓ Usuario creado exitosamente!");
                 Console.WriteLine($"  Nombre: {nuevoUsuario.Nombre} {nuevoUsuario.Apellido}");
                 Console.WriteLine($"  Email generado: {nuevoUsuario.Email}");
                 Console.WriteLine($"  Equipo: {nuevoUsuario.Equipo.Nombre}");
+                Console.WriteLine($"  Rol: {nuevoUsuario.Rol}");
             }
             catch (FormatException)
             {
@@ -224,7 +248,7 @@ namespace Consola
             }
         }
 
-        // Opción 4: Listar usuarios de un equipo
+
         // Opción 4: Listar usuarios de un equipo
         static void ListarUsuariosPorEquipo()
         {

@@ -1,0 +1,109 @@
+﻿@model List<Dominio.Entidades.Pago>
+
+@{
+    ViewData["Title"] = "Título";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>📊 Pagos del Equipo: @ViewBag.NombreEquipo</h2>
+        </div>
+    </div>
+
+    <!-- Filtro por mes/año -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Filtrar por Mes/Año</h5>
+                    <form method="get" asp-action="PagosEquipo" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Mes</label>
+                            <select class="form-select" name="mes">
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option value="@i" selected="@(i == ViewBag.MesSeleccionado)">
+                                        @(new DateTime(2000, i, 1).ToString("MMMM"))
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Año</label>
+                            <select class="form-select" name="año">
+                                @for (int año = DateTime.Now.Year; año >= 2020; año--)
+                                {
+                                    <option value="@año" selected="@(año == ViewBag.AñoSeleccionado)">@año</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                            <a asp-action="PagosEquipo" class="btn btn-secondary">Limpiar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> No hay pagos registrados en este período.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Tipo</th>
+                        <th>Descripción</th>
+                        <th>Tipo de Gasto</th>
+                        <th>Método</th>
+                        <th>Monto Base</th>
+                        <th>Monto Total</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pago in Model)
+                    {
+                        <tr>
+                            <td>@pago.Id</td>
+                            <td>@pago.Usuario.Nombre @pago.Usuario.Apellido</td>
+                            <td>
+                                @if (pago is Dominio.Entidades.PagoUnico)
+                                {
+                                    <span class="badge bg-success">Único</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-primary">Recurrente</span>
+                                }
+                            </td>
+                            <td>@pago.Descripcion</td>
+                            <td>@pago.TipoGasto.Nombre</td>
+                            <td>
+                                <span class="badge bg-secondary">@pago.MetodoPago</span>
+                            </td>
+                            <td>$@pago.Monto.ToString("N2")</td>
+                            <td><strong>$@pago.CalcularTotal().ToString("N2")</strong></td>
+                            <td><small>@pago.ObtenerEstado()</small></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="alert alert-light mt-3">
+            <strong>Total de pagos:</strong> @Model.Count
+        </div>
+    }
+</div>

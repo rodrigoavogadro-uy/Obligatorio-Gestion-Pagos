@@ -1,0 +1,50 @@
+﻿@model Dominio.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Título de la página";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR ESTA LÍNEA
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">👤 Mi Perfil</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Rol:</th>
+                            <td><span class="badge bg-info">@Model.Rol</span></td>
+                        </tr>
+                        <tr>
+                            <th>Nombre:</th>
+                            <td>@Model.Nombre</td>
+                        </tr>
+                        <tr>
+                            <th>Apellido:</th>
+                            <td>@Model.Apellido</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <th>Equipo:</th>
+                            <td><strong>@Model.Equipo.Nombre</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Fecha Incorporación:</th>
+                            <td>@Model.FechaIncorporacion.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <th>Gasto este mes:</th>
+                            <td><strong class="text-danger">$@ViewBag.GastoMensual.ToString("N2")</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+﻿@model Dominio.Entidades.Usuario
+
+@{
+    ViewData["Title"] = "Título";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ← AGREGAR
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">👤 Mi Perfil</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Rol:</th>
+                            <td><span class="badge bg-danger">@Model.Rol</span></td>
+                        </tr>
+                        <tr>
+                            <th>Nombre:</th>
+                            <td>@Model.Nombre</td>
+                        </tr>
+                        <tr>
+                            <th>Apellido:</th>
+                            <td>@Model.Apellido</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <th>Equipo:</th>
+                            <td><strong>@Model.Equipo.Nombre</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Fecha Incorporación:</th>
+                            <td>@Model.FechaIncorporacion.ToShortDateString()</td>
+                        </tr>
+                        <tr>
+                            <th>Mi gasto este mes:</th>
+                            <td><strong class="text-danger">$@ViewBag.GastoMensual.ToString("N2")</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">👥 Miembros del Equipo</h3>
+                </div>
+                <div class="card-body">
+                    @{
+                        var miembros = ViewBag.MiembrosEquipo as List<Dominio.Entidades.Usuario>;
+                    }
+
+                    @if (miembros.Count == 0)
+                    {
+                        <p class="text-muted">No hay otros miembros en el equipo.</p>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                        <th>Rol</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var miembro in miembros)
+                                    {
+                                        <tr>
+                                            <td>@miembro.Nombre @miembro.Apellido</td>
+                                            <td><small>@miembro.Email</small></td>
+                                            <td>
+                                                @if (miembro.Rol == Dominio.Enumeraciones.Rol.GERENTE)
+                                                {
+                                                    <span class="badge bg-danger">GERENTE</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-info">EMPLEADO</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <small class="text-muted">Total: @miembros.Count miembro(s)</small>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

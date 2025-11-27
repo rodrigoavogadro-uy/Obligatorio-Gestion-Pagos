@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Dominio.Enumeraciones;
+using Dominio.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Dominio.Interfaces;
 
 namespace Dominio.Entidades
 {
@@ -17,6 +17,7 @@ namespace Dominio.Entidades
         private string _email;
         private Equipo _equipo;
         private DateTime _fechaIncorporacion;
+        private Rol _rol;
 
         // Propiedades públicas
         public string Nombre
@@ -71,15 +72,22 @@ namespace Dominio.Entidades
             set { _fechaIncorporacion = value; }
         }
 
+        public Rol Rol
+        {
+            get { return _rol; }
+            set { _rol = value; }
+        }
+
         // Constructor
         public Usuario(string nombre, string apellido, string contraseña,
-                       Equipo equipo, DateTime fechaIncorporacion)
+                       Equipo equipo, DateTime fechaIncorporacion, Rol rol)
         {
             _nombre = nombre;
             _apellido = apellido;
             _contraseña = contraseña;
             _equipo = equipo;
             _fechaIncorporacion = fechaIncorporacion;
+            _rol = rol;
             Validar();
         }
 

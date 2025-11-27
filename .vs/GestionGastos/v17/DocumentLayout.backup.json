@@ -3,48 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\controllers\\gerentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\controllers\\gerentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4469A325-D58E-486D-909A-D34BA0DE5D4A}|Consola\\Consola.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\consola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4469A325-D58E-486D-909A-D34BA0DE5D4A}|Consola\\Consola.csproj|solutionrelative:consola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\empleado\\mispagos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\empleado\\mispagos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\gerente\\pagosequipo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\gerente\\pagosequipo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\pagorecurrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\pagorecurrente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\gerente\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\gerente\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\gerente\\cargartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\gerente\\cargartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\gerente\\eliminartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\gerente\\eliminartipogasto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\gerente\\cargarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\gerente\\cargarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\equipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\pagounico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\pagounico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\empleado\\cargarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\empleado\\cargarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\filters\\autorizarrolattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\filters\\autorizarrolattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E127387-1382-495B-934A-8CCFD28879A4}|Web\\Web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\entidades\\tipogasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\tipogasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\interfaces\\ivalidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\interfaces\\ivalidable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|c:\\users\\rodri\\desktop\\analista en tecnolog\u00EDas de la informaci\u00F3n\\programaci\u00F3n 2\\programacion 2 - intento 2\\obligatorio\\gestiongastos\\dominio\\enumeraciones\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6FC3454-7498-4189-8ED2-8F7CABEF997A}|Dominio\\Dominio.csproj|solutionrelative:dominio\\enumeraciones\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,143 +74,201 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Equipo.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Equipo.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\Equipo.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Equipo.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\Equipo.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwC4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T15:05:52.809Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Sistema.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Sistema.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\Sistema.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Sistema.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\Sistema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T23:11:06.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PagoRecurrente.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\PagoRecurrente.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\PagoRecurrente.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\PagoRecurrente.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\PagoRecurrente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:57:20.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pago.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Pago.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\Pago.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Pago.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\Pago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:51:12.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TipoGasto.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\TipoGasto.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\TipoGasto.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\TipoGasto.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\TipoGasto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:47:18.567Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Usuario.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\Usuario.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Usuario.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK0AAAAfAAAAAAAAAA==",
+              "Title": "GerenteController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Controllers\\GerenteController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\GerenteController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Controllers\\GerenteController.cs",
+              "RelativeToolTip": "Web\\Controllers\\GerenteController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:32:34.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MetodoPago.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Enumeraciones\\MetodoPago.cs",
-              "RelativeDocumentMoniker": "Dominio\\Enumeraciones\\MetodoPago.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Enumeraciones\\MetodoPago.cs",
-              "RelativeToolTip": "Dominio\\Enumeraciones\\MetodoPago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T14:58:49.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IValidable.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Interfaces\\IValidable.cs",
-              "RelativeDocumentMoniker": "Dominio\\Interfaces\\IValidable.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Interfaces\\IValidable.cs",
-              "RelativeToolTip": "Dominio\\Interfaces\\IValidable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T14:52:35.802Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Dominio.csproj",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Dominio.csproj",
-              "RelativeDocumentMoniker": "Dominio\\Dominio.csproj",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Dominio.csproj",
-              "RelativeToolTip": "Dominio\\Dominio.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-09T14:51:19.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Consola\\Program.cs",
-              "RelativeDocumentMoniker": "Consola\\Program.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Consola\\Program.cs",
-              "RelativeToolTip": "Consola\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T14:40:47.978Z",
+              "WhenOpened": "2025-11-26T20:53:54.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "PagoUnico.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\PagoUnico.cs",
-              "RelativeDocumentMoniker": "Dominio\\Entidades\\PagoUnico.cs",
-              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\PagoUnico.cs",
-              "RelativeToolTip": "Dominio\\Entidades\\PagoUnico.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "EliminarTipoGasto.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\EliminarTipoGasto.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Gerente\\EliminarTipoGasto.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\EliminarTipoGasto.cshtml",
+              "RelativeToolTip": "Web\\Views\\Gerente\\EliminarTipoGasto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:28:25.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CargarTipoGasto.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\CargarTipoGasto.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Gerente\\CargarTipoGasto.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\CargarTipoGasto.cshtml",
+              "RelativeToolTip": "Web\\Views\\Gerente\\CargarTipoGasto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:28:18.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Perfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\Perfil.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Gerente\\Perfil.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\Perfil.cshtml",
+              "RelativeToolTip": "Web\\Views\\Gerente\\Perfil.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:28:10.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PagosEquipo.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\PagosEquipo.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Gerente\\PagosEquipo.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\PagosEquipo.cshtml",
+              "RelativeToolTip": "Web\\Views\\Gerente\\PagosEquipo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:27:57.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sistema.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Sistema.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\Sistema.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Sistema.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\Sistema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T23:09:40.638Z"
+              "WhenOpened": "2025-10-09T23:11:06.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Web\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:05:20.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MisPagos.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Empleado\\MisPagos.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Empleado\\MisPagos.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Empleado\\MisPagos.cshtml",
+              "RelativeToolTip": "Web\\Views\\Empleado\\MisPagos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:27:37.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CargarPago.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\CargarPago.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Gerente\\CargarPago.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Gerente\\CargarPago.cshtml",
+              "RelativeToolTip": "Web\\Views\\Gerente\\CargarPago.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:28:37.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Equipo.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Equipo.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\Equipo.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\Equipo.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\Equipo.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T23:10:59.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CargarPago.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Empleado\\CargarPago.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Empleado\\CargarPago.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Empleado\\CargarPago.cshtml",
+              "RelativeToolTip": "Web\\Views\\Empleado\\CargarPago.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:26:58.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAYwKkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T23:26:22.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Web\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T23:01:53.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AutorizarRolAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Filters\\AutorizarRolAttribute.cs",
+              "RelativeDocumentMoniker": "Web\\Filters\\AutorizarRolAttribute.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Filters\\AutorizarRolAttribute.cs",
+              "RelativeToolTip": "Web\\Filters\\AutorizarRolAttribute.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T23:00:57.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Program.cs",
+              "RelativeDocumentMoniker": "Web\\Program.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Web\\Program.cs",
+              "RelativeToolTip": "Web\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T23:00:06.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TipoGasto.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\TipoGasto.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\TipoGasto.cs",
+              "ToolTip": "C:\\Users\\rodri\\Desktop\\Analista en Tecnolog\u00EDas de la Informaci\u00F3n\\Programaci\u00F3n 2\\PROGRAMACION 2 - INTENTO 2\\Obligatorio\\GestionGastos\\Dominio\\Entidades\\TipoGasto.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\TipoGasto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T22:47:18.567Z"
             }
           ]
         }

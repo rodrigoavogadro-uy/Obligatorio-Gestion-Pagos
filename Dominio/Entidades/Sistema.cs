@@ -143,7 +143,7 @@ namespace Dominio.Entidades
 
         // Crear un usuario con generación automática de email
         public Usuario CrearUsuario(string nombre, string apellido, string contraseña,
-                                    string nombreEquipo, DateTime fechaIncorporacion)
+                                    string nombreEquipo, DateTime fechaIncorporacion, Rol rol)
         {
             // Buscar el equipo por nombre
             Equipo equipo = null;
@@ -161,16 +161,15 @@ namespace Dominio.Entidades
                 throw new Exception($"No existe un equipo con el nombre '{nombreEquipo}'");
             }
 
-            // Crear el usuario
-            Usuario nuevoUsuario = new Usuario(nombre, apellido, contraseña, equipo, fechaIncorporacion);
+            // Crear el usuario con el rol
+            Usuario nuevoUsuario = new Usuario(nombre, apellido, contraseña, equipo, fechaIncorporacion, rol);
 
-            // Agregar al sistema (esto genera el email automáticamente)
+            // Agregar al sistema (genera el email automáticamente)
             AgregarUsuario(nuevoUsuario);
 
             return nuevoUsuario;
         }
 
-        // Obtener pagos del mes actual
         // Obtener pagos del mes actual
         public List<Pago> ObtenerPagosDelMesActual()
         {
@@ -238,6 +237,226 @@ namespace Dominio.Entidades
             return true; // El email es único
         }
 
+
+        // Validar login: retorna el usuario si email y contraseña son correctos
+        public Usuario ValidarLogin(string email, string contraseña)
+        {
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contraseña))
+            {
+                return null;
+            }
+
+            // Buscar usuario por email y contraseña
+            foreach (Usuario usuario in _usuarios)
+            {
+                if (usuario.Email == email && usuario.Contraseña == contraseña)
+                {
+                    return usuario; // Login exitoso
+                }
+            }
+
+            return null; // Usuario no encontrado o contraseña incorrecta
+        }
+
+
+        // Obtener todos los pagos del mes actual de un usuario específico
+        public List<Pago> ObtenerPagosDelMesPorUsuario(Usuario usuario)
+        {
+            List<Pago> pagosDelMes = new List<Pago>();
+            DateTime fechaActual = DateTime.Now;
+            int mesActual = fechaActual.Month;
+            int añoActual = fechaActual.Year;
+
+            foreach (Pago pago in _pagos)
+            {
+                // Solo pagos de este usuario
+                if (pago.Usuario.Email != usuario.Email)
+                {
+                    continue;
+                }
+
+                // Verificar si el pago es del mes actual
+                if (pago is PagoUnico)
+                {
+                    PagoUnico pagoUnico = (PagoUnico)pago;
+                    if (pagoUnico.FechaPago.Month == mesActual && pagoUnico.FechaPago.Year == añoActual)
+                    {
+                        pagosDelMes.Add(pago);
+                    }
+                }
+                else if (pago is PagoRecurrente)
+                {
+                    PagoRecurrente pagoRecurrente = (PagoRecurrente)pago;
+
+                    // Fecha desde debe ser anterior o igual al mes actual
+                    bool inicioValido = (pagoRecurrente.FechaDesde.Year < añoActual) ||
+                                       (pagoRecurrente.FechaDesde.Year == añoActual &&
+                                        pagoRecurrente.FechaDesde.Month <= mesActual);
+
+                    bool finValido = false;
+                    if (pagoRecurrente.FechaHasta == null)
+                    {
+                        finValido = true;
+                    }
+                    else
+                    {
+                        finValido = (pagoRecurrente.FechaHasta.Value.Year > añoActual) ||
+                                   (pagoRecurrente.FechaHasta.Value.Year == añoActual &&
+                                    pagoRecurrente.FechaHasta.Value.Month >= mesActual);
+                    }
+
+                    if (inicioValido && finValido)
+                    {
+                        pagosDelMes.Add(pago);
+                    }
+                }
+            }
+
+            return pagosDelMes;
+        }
+
+        // Obtener pagos de un equipo en un mes/año específico
+        public List<Pago> ObtenerPagosDelEquipoPorMes(Equipo equipo, int mes, int año)
+        {
+            List<Pago> pagosDelEquipo = new List<Pago>();
+
+            foreach (Pago pago in _pagos)
+            {
+                // Solo pagos de usuarios del equipo
+                if (pago.Usuario.Equipo.Id != equipo.Id)
+                {
+                    continue;
+                }
+
+                // Verificar si el pago corresponde al mes/año indicado
+                if (pago is PagoUnico)
+                {
+                    PagoUnico pagoUnico = (PagoUnico)pago;
+                    if (pagoUnico.FechaPago.Month == mes && pagoUnico.FechaPago.Year == año)
+                    {
+                        pagosDelEquipo.Add(pago);
+                    }
+                }
+                else if (pago is PagoRecurrente)
+                {
+                    PagoRecurrente pagoRecurrente = (PagoRecurrente)pago;
+
+                    // Fecha desde debe ser anterior o igual al mes indicado
+                    bool inicioValido = (pagoRecurrente.FechaDesde.Year < año) ||
+                                       (pagoRecurrente.FechaDesde.Year == año &&
+                                        pagoRecurrente.FechaDesde.Month <= mes);
+
+                    bool finValido = false;
+                    if (pagoRecurrente.FechaHasta == null)
+                    {
+                        finValido = true;
+                    }
+                    else
+                    {
+                        finValido = (pagoRecurrente.FechaHasta.Value.Year > año) ||
+                                   (pagoRecurrente.FechaHasta.Value.Year == año &&
+                                    pagoRecurrente.FechaHasta.Value.Month >= mes);
+                    }
+
+                    if (inicioValido && finValido)
+                    {
+                        pagosDelEquipo.Add(pago);
+                    }
+                }
+            }
+
+            return pagosDelEquipo;
+        }
+
+
+        // Calcular cuanto ha gastado un usuario este mes
+        public decimal CalcularGastoMensualUsuario(Usuario usuario)
+        {
+            List<Pago> pagosDelMes = ObtenerPagosDelMesPorUsuario(usuario);
+            decimal total = 0;
+
+            foreach (Pago pago in pagosDelMes)
+            {
+                if (pago is PagoRecurrente)
+                {
+                    // Para recurrentes, usar solo el monto mensual (no el total)
+                    total += pago.Monto;
+                }
+                else
+                {
+                    // Para únicos, usar el monto completo
+                    total += pago.Monto;
+                }
+            }
+
+            return total;
+        }
+
+
+        // Obtener todos los miembros de un equipo ordenados por email (sin LINQ)
+        public List<Usuario> ObtenerMiembrosEquipoOrdenados(Equipo equipo)
+        {
+            List<Usuario> miembros = new List<Usuario>();
+
+            // Filtrar usuarios del equipo
+            foreach (Usuario usuario in _usuarios)
+            {
+                if (usuario.Equipo.Id == equipo.Id)
+                {
+                    miembros.Add(usuario);
+                }
+            }
+
+            // Ordenar por email ascendente 
+            for (int i = 0; i < miembros.Count - 1; i++)
+            {
+                for (int j = 0; j < miembros.Count - i - 1; j++)
+                {
+                    // Comparar emails
+                    if (string.Compare(miembros[j].Email, miembros[j + 1].Email) > 0)
+                    {
+                        // Intercambiar
+                        Usuario temp = miembros[j];
+                        miembros[j] = miembros[j + 1];
+                        miembros[j + 1] = temp;
+                    }
+                }
+            }
+
+            return miembros;
+        }
+
+
+        // Eliminar un tipo de gasto si no está siendo usado
+        public bool EliminarTipoGasto(TipoGasto tipoGasto)
+        {
+            if (tipoGasto == null)
+            {
+                throw new Exception("El tipo de gasto no puede ser nulo");
+            }
+
+            // Verificar que no esté siendo usado por ningún pago
+            foreach (Pago pago in _pagos)
+            {
+                if (pago.TipoGasto.Nombre == tipoGasto.Nombre)
+                {
+                    return false; // Está siendo usado, no se puede eliminar
+                }
+            }
+
+            // No está siendo usado, se puede eliminar
+            _tiposGasto.Remove(tipoGasto);
+            return true;
+        }
+
+
+        // Obtener todos los tipos de gasto
+        public List<TipoGasto> ObtenerTodosTiposGasto()
+        {
+            return _tiposGasto;
+        }
+
+
         // Método para precarga de datos
         public void PrecargarDatos()
         {
@@ -281,28 +500,28 @@ namespace Dominio.Entidades
             // ============================================
             // 3. PRECARGAR USUARIOS (22 usuarios)
             // ============================================
-            CrearUsuario("Ana", "Lopez", "clave1234", "CodeCrafters", new DateTime(2020, 2, 10));
-            CrearUsuario("Juan", "Martinez", "passcode1", "CodeCrafters", new DateTime(2021, 7, 22));
-            CrearUsuario("Lia", "Gomez", "secure987", "CodeCrafters", new DateTime(2022, 5, 14));
-            CrearUsuario("Tom", "Li", "contrase12", "CodeCrafters", new DateTime(2023, 3, 30));
-            CrearUsuario("Mia", "Z", "password8", "CodeCrafters", new DateTime(2024, 8, 5));
-            CrearUsuario("Ax", "Perez", "codepass9", "CodeCrafters", new DateTime(2021, 10, 11));
-            CrearUsuario("Sofia", "Ramos", "bytepass1", "ByteStorm", new DateTime(2020, 1, 19));
-            CrearUsuario("Lucas", "Fernandez", "clave2020", "ByteStorm", new DateTime(2022, 4, 25));
-            CrearUsuario("Ema", "Wu", "storm888", "ByteStorm", new DateTime(2023, 9, 12));
-            CrearUsuario("Leo", "N", "devpass11", "ByteStorm", new DateTime(2024, 5, 4));
-            CrearUsuario("Martina", "Sosa", "byte3210", "ByteStorm", new DateTime(2021, 6, 17));
-            CrearUsuario("Igor", "Lara", "storm999", "ByteStorm", new DateTime(2022, 12, 9));
-            CrearUsuario("Diego", "Torres", "titans123", "DevTitans", new DateTime(2020, 8, 7));
-            CrearUsuario("Valentina", "Suarez", "clave4567", "DevTitans", new DateTime(2021, 3, 28));
-            CrearUsuario("Max", "Qi", "titanpass", "DevTitans", new DateTime(2023, 1, 5));
-            CrearUsuario("Ian", "B", "devtitans", "DevTitans", new DateTime(2024, 9, 2));
-            CrearUsuario("Carla", "Mendez", "password1", "DevTitans", new DateTime(2022, 7, 14));
-            CrearUsuario("Pablo", "Cruz", "titans777", "DevTitans", new DateTime(2023, 11, 23));
-            CrearUsuario("Florencia", "Alvarez", "quantum88", "QuantumStack", new DateTime(2020, 12, 15));
-            CrearUsuario("Nico", "Chen", "stackpass", "QuantumStack", new DateTime(2021, 9, 3));
-            CrearUsuario("Jo", "Ramirez", "qstack22", "QuantumStack", new DateTime(2022, 6, 21));
-            CrearUsuario("Elena", "Paz", "claveq789", "QuantumStack", new DateTime(2023, 4, 19));
+            CrearUsuario("Ana", "Lopez", "clave1234", "CodeCrafters", new DateTime(2020, 2, 10), Rol.GERENTE);
+            CrearUsuario("Juan", "Martinez", "passcode1", "CodeCrafters", new DateTime(2021, 7, 22), Rol.GERENTE);
+            CrearUsuario("Lia", "Gomez", "secure987", "CodeCrafters", new DateTime(2022, 5, 14), Rol.EMPLEADO);
+            CrearUsuario("Tom", "Li", "contrase12", "CodeCrafters", new DateTime(2023, 3, 30), Rol.EMPLEADO);
+            CrearUsuario("Mia", "Z", "password8", "CodeCrafters", new DateTime(2024, 8, 5), Rol.EMPLEADO);
+            CrearUsuario("Ax", "Perez", "codepass9", "CodeCrafters", new DateTime(2021, 10, 11), Rol.EMPLEADO);
+            CrearUsuario("Sofia", "Ramos", "bytepass1", "ByteStorm", new DateTime(2020, 1, 19), Rol.EMPLEADO);
+            CrearUsuario("Lucas", "Fernandez", "clave2020", "ByteStorm", new DateTime(2022, 4, 25), Rol.EMPLEADO);
+            CrearUsuario("Ema", "Wu", "storm888", "ByteStorm", new DateTime(2023, 9, 12), Rol.EMPLEADO);
+            CrearUsuario("Leo", "N", "devpass11", "ByteStorm", new DateTime(2024, 5, 4), Rol.EMPLEADO);
+            CrearUsuario("Martina", "Sosa", "byte3210", "ByteStorm", new DateTime(2021, 6, 17), Rol.EMPLEADO);
+            CrearUsuario("Igor", "Lara", "storm999", "ByteStorm", new DateTime(2022, 12, 9), Rol.EMPLEADO);
+            CrearUsuario("Diego", "Torres", "titans123", "DevTitans", new DateTime(2020, 8, 7), Rol.EMPLEADO);
+            CrearUsuario("Valentina", "Suarez", "clave4567", "DevTitans", new DateTime(2021, 3, 28), Rol.EMPLEADO);
+            CrearUsuario("Max", "Qi", "titanpass", "DevTitans", new DateTime(2023, 1, 5), Rol.EMPLEADO);
+            CrearUsuario("Ian", "B", "devtitans", "DevTitans", new DateTime(2024, 9, 2), Rol.EMPLEADO);
+            CrearUsuario("Carla", "Mendez", "password1", "DevTitans", new DateTime(2022, 7, 14), Rol.EMPLEADO);
+            CrearUsuario("Pablo", "Cruz", "titans777", "DevTitans", new DateTime(2023, 11, 23), Rol.EMPLEADO);
+            CrearUsuario("Florencia", "Alvarez", "quantum88", "QuantumStack", new DateTime(2020, 12, 15), Rol.EMPLEADO);
+            CrearUsuario("Nico", "Chen", "stackpass", "QuantumStack", new DateTime(2021, 9, 3), Rol.EMPLEADO);
+            CrearUsuario("Jo", "Ramirez", "qstack22", "QuantumStack", new DateTime(2022, 6, 21), Rol.EMPLEADO);
+            CrearUsuario("Elena", "Paz", "claveq789", "QuantumStack", new DateTime(2023, 4, 19), Rol.EMPLEADO);
 
             // Obtener lista de usuarios para usar en los pagos
             List<Usuario> usuarios = ObtenerTodosLosUsuarios();
